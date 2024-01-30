@@ -27,6 +27,8 @@ const inputKmElement = document.querySelector("#travelLenght");
 const inputAgeElement = document.querySelector("#userAge");
 const outputPriceElement = document.querySelector("#priceOutput");
 const outputCoachElement = document.querySelector("#coach");
+const outputRateElement = document.querySelector("#rate");
+const outputCpCodeElement = document.querySelector("#cpCode");
 
 
 
@@ -47,14 +49,21 @@ buttonPrintElement.addEventListener("click",
         //calcolo il prezzo finale
         const basePrice = pricePerKm * kmValue;
         let finalPrice = basePrice;
+        outputRateElement.textContent = "Standard";
+        outputCpCodeElement.textContent = "9960";
+
 
         if (ageValue < 18) {
             finalPrice = basePrice - basePrice * 0.2;
+            outputRateElement.textContent = "Under 18";
+
         }
 
         else if (ageValue >= 65) {
             finalPrice = basePrice - basePrice * 0.4;
+            outputRateElement.textContent = "Over 65";
         }
+
 
         outputPriceElement.textContent = "€ " + finalPrice.toFixed(2);
 
