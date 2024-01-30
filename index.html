@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 
 <head>
     <meta charset="UTF-8">
@@ -14,20 +14,22 @@
 
     <div>
 
-        <div>
-            <label for="userName">Nome e Cognome</label>
-            <input type="text" id="userName">
-        </div>
+        <form>
+            <div>
+                <label for="userName">Nome e Cognome</label>
+                <input type="text" id="userName" autocomplete="name">
+            </div>
 
-        <div>
-            <label for="travelLenght">Km da percorrere</label>
-            <input type="number" id="travelLenght">
-        </div>
+            <div>
+                <label for="travelLenght">Km da percorrere</label>
+                <input type="number" id="travelLenght">
+            </div>
 
-        <div>
-            <label for="userAge">Età</label>
-            <input type="number" id="userAge">
-        </div>
+            <div>
+                <label for="userAge">Età</label>
+                <input type="number" id="userAge">
+            </div>
+        </form>
 
         <button id="printTicket">
             Genera
@@ -41,6 +43,12 @@
 
 
     <h2>IL TUO BIGLIETTO</h2>
+    <h4>Nome passeggero</h4>
+    <p id="userOutput"></p>
+
+    <strong>Costo biglietto</strong>
+    <p id="priceOutput"></p>
+
 
     <script src="./js/script.js"></script>
 </body>
