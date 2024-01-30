@@ -6,50 +6,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Esercizio Biglietto Treno con form</title>
 
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- css -->
+    <link rel="stylesheet" href="./css/style.css">
+
 </head>
 
 <body>
 
-    <h1>ACQUISTA BIGLIETTO</h1>
+    <h1 class="text-white text-center m-5">ACQUISTA BIGLIETTO</h1>
 
-    <div>
+    <div class="container shadow">
+        <div class="row bg-white p-5 rounded-2">
 
-        <form>
-            <div>
-                <label for="userName">Nome e Cognome</label>
-                <input type="text" id="userName" autocomplete="name">
+            <form class="d-flex shadow justify-content-between shadow-none">
+                <div class="d-flex flex-column text-center gap-3">
+                    <label class="fs-5 my_custom-color-red" for="userName">Nome e Cognome</label>
+                    <input type="text" class="my_custom-border-red rounded-2" id="userName" autocomplete="name">
+                </div>
+
+                <div class="d-flex flex-column text-center gap-3">
+                    <label class="fs-5 my_custom-color-red" for="travelLenght">Km da percorrere</label>
+                    <input type="number" class="my_custom-border-red rounded-2" id="travelLenght">
+                </div>
+
+                <div class="d-flex flex-column text-center gap-3">
+                    <label class="fs-5 my_custom-color-red" for="userAge">Età</label>
+                    <input type="number" class="my_custom-border-red rounded-2" id="userAge">
+                </div>
+            </form>
+
+            <div class="d-flex gap-3 justify-content-center mt-5">
+                <button class="px-5 rounded-2 fs-5 my_custom-color-green my_custom-border-green text-white"
+                    id="printTicket">
+                    Genera
+                </button>
+
+                <button class="px-5 bg-white my_custom-color-red rounded-2 fs-5 my_custom-border-red" id="undo">
+                    Annulla
+                </button>
             </div>
 
-            <div>
-                <label for="travelLenght">Km da percorrere</label>
-                <input type="number" id="travelLenght">
-            </div>
 
-            <div>
-                <label for="userAge">Età</label>
-                <input type="number" id="userAge">
-            </div>
-        </form>
-
-        <button id="printTicket">
-            Genera
-        </button>
-
-        <button id="undo">
-            Annulla
-        </button>
-
+        </div>
     </div>
 
+    <h2 class="text-white text-center m-5">IL TUO BIGLIETTO</h2>
 
-    <h2>IL TUO BIGLIETTO</h2>
-    <h4>Nome passeggero</h4>
-    <p id="userOutput"></p>
+    <div class="container shadow">
+        <div class="row bg-white p-5 rounded-2">
 
-    <strong>Costo biglietto</strong>
-    <p id="priceOutput"></p>
+            <h4>Nome passeggero</h4>
+            <p id="userOutput"></p>
 
+            <strong>Costo biglietto</strong>
+            <p id="priceOutput"></p>
+        </div>
+    </div>
 
+    <!-- bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <!-- javascript -->
     <script src="./js/script.js"></script>
 </body>
 
