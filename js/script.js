@@ -26,6 +26,7 @@ const pricePerKm = 0.21;
 const inputKmElement = document.querySelector("#travelLenght");
 const inputAgeElement = document.querySelector("#userAge");
 const outputPriceElement = document.querySelector("#priceOutput");
+const outputCoachElement = document.querySelector("#coach");
 
 
 
@@ -56,6 +57,8 @@ buttonPrintElement.addEventListener("click",
         }
 
         outputPriceElement.textContent = "€ " + finalPrice.toFixed(2);
+
+        outputCoachElement.textContent = Math.floor(Math.random() * 5 + 1);
 
     }
 )
